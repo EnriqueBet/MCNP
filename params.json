@@ -1,0 +1,6 @@
+{
+  "name": "MCNP-IPN",
+  "tagline": "#mcnpipn",
+  "body": "\r\n#Teoría\r\nLa solución de problemas de transporte de partículas por el método de Monte Carlo (MC) es simple, solo hay que simular el comportamiento de la partícula; el problema está en cuán detallado se requiere la simulación y lo que se desea obtener.\r\nEstas lecciones presentan una aproximación balanceada entre la teoría y la práctica del código de simulación Monte Carlo.\r\n\r\n#Contenido\r\n##Lección 1 y 2:\r\n- Un repaso de los métodos de simulación de Monte Carlo\r\n- La ecuación de transporte\r\n- Muestreo aleatorio\r\n- Geometría computacional\r\n- Física de colisiones y\r\n- Estadística\r\n\r\n##Lección 3, 4 y 5:\r\n- Estados del arte en simulaciones de criticidad con Monte Carlo\r\n- Teoría de cálculo de valores propios\r\n- Análisis de convergencia\r\n- k e f f\r\n- Tallies\r\n- Incertidumbres\r\n- Caso de estudio realista ¿Chicago 9000?\r\n- Técnicas de aceleración Wielandt\r\n- Modelado de diferentes tipos de problemas y geometrías\r\n- Dependencia de la temperatura, deposición de energía, etc.\r\n\r\n#Contacto:\r\narturo.delfin@inin.gob.mx\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
