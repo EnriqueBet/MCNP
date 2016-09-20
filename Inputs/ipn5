@@ -1,0 +1,43 @@
+Haz de neutrones D_T, losa polietileno, detector
+c
+c     INSTITUTO POLITECNICO NACIONAL
+c     Elaboro: ADL
+c     Email: arturo.delfin@inin.gob.mx
+c
+c     -- Fecha de elaboracion del archivo de entrada: --
+c        14 de Julio de 2016
+c
+c    Tarjeta de Celdas
+c
+100     0        -10      imp:n=0  $ vacio a la izquierda, mata neutrones
+200     0        +10 -20  imp:n=1  $ vacio a la izquierda de la losa
+300  1000 -0.93  +20 -30  imp:n=1  $ losa de polietileno, dens=.93 g/cc
+400     0        +30 -40  imp:n=1  $ vacio a la derecha de la losa
+500     0        +40      imp:n=0  $ vacio a la derecha, mata neutrones
+
+c
+c    Tarjeta de Superficies
+c
+10   px   -5.0                     $ plano en x, problema de frontera izquierda
+20   px    5.0                     $ plano en x, lado izquierdo de la losa de polietileno
+30   px   10.0                     $ plano en x, lado derecho de la losa de polietileno
+40   px   25.0                     $ plano en x, problema de frontera derecho
+
+c    Tarjeta de Datos
+c
+nps    100000                      $ numero de particulas por segundo
+c
+c  Materiales (puede incluirse la tarjeta "mt1000 poly")
+c
+m1000   1001   2                   $ H
+        6000   1                   $ C
+c
+c  Fuente
+c
+sdef   pos= 0. 0. 0.  erg=14.0     $ Fuente isotropica de D-T
+c
+c   Detector puntual
+c
+f5:n  20.0  0.0  0.0    0.0        $ x, y, z,  radio
+c
+c    Fin de archivo

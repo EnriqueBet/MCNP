@@ -1,0 +1,28 @@
+Criticidad - Empleando ksrc & ssperficies $ TITULO
+c
+c     INSTITUTO POLITECNICO NACIONAL
+c     Elaboro: ADL
+c     Email: arturo.delfin@inin.gob.mx
+c
+c     -- Fecha de elaboracion del archivo de entrada: --
+c        4 de Julio de 2016
+c
+c    Tarjeta de Celdas      $ COMENTARIO
+c
+10   100   -18.74   -10     $ CELDAS
+20     0            +10     $ CELDAS
+                            $ NOTA: LINEA EN BLANCO !!!
+c
+c    Tarjeta de Superficies $ COMENTARIO
+c
+10   so   9.538             $ SUPERFICIES
+                            $ NOTA: LINEA EN BLANCO !!!
+c    Tarjeta de Datos       $ COMENTARIO
+c
+kcode  1000  1.0  10  50
+ksrc    0.0  0.0  0.0       $ COLOCACIÓN DE LA FUENTE
+imp:n   1.0  0.0            $ importancia del neutron para la
+c                             celda 10 y 20 respectivamente
+m100    92235   -0.9473     $ MATERIALES
+        92238   -0.0527     $ MATERIALES
+c    Fin de archivo

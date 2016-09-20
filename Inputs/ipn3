@@ -1,0 +1,52 @@
+ipn3 - Cilindro simple
+c
+c     INSTITUTO POLITECNICO NACIONAL
+c     Elaboro: ADL
+c     Email: arturo.delfin@inin.gob.mx
+c
+c     -- Fecha de elaboracion del archivo de entrada: --
+c        4 de Julio de 2016
+c
+c    Tarjeta de Celdas      $ COMENTARIO
+c
+10   100   9.9270e-2   -10  -30  imp:n=1     $ Solucion
+20     0               -10  +30  imp:n=1     $ Vacio arriba-solucion
+30   200   8.6360e-2    10  -20  imp:n=1     $ Lata
+40     0                     20  imp:n=0     $ Exterior vacío
+c     ........ sigue linea en blanco
+
+c    Tarjeta de Superficies
+c
+10   RCC  0.  0.  0.   0.  0.  101.7   12.49 $ Interior de la lata
+20   RCC  0.  0. -1.   0.  0.  103.7   12.79 $ Esterior de la lata
+30   pz  39.24                               $ Altura de la solucion
+c     ........ sigue linea en blanco
+
+c    Tarjeta de Datos       $ COMENTARIO
+c
+kcode  1000  1.0  25  100                    $ Calculo de criticidad
+ksrc    0.0  0.0  19.62                      $ Posicion de la fuente
+c
+m100    1001   6.0070e-2     $ Material de la solucion Pu(NO3)3
+        8016   3.6540e-2     
+        7014   2.3699e-3
+       94239   2.7682e-4
+       94240   1.2214e-5
+       94241   8.3390e-7
+       94242   4.5800e-8
+mt100  lwtr
+c
+m200   24050   7.1866e-4     $ Material de la lata
+       24052   1.3859e-2
+       24053   1.5715e-3
+       24054   3.9117e-4
+       26054   3.7005e-3
+       26056   5.8090e-2
+       26057   1.3415e-3
+       26058   1.7853e-4
+       28058   4.4318e-3
+       28060   1.70713-3
+       28061   7.4207e-5
+       28062   2.3661e-4
+       28064   6.0256e-5
+c     ........ sigue linea en blanco

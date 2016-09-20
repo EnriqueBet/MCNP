@@ -1,0 +1,18 @@
+ipn3 - Cilindro simple
+10   100   9.9270e-2   -10  -30  imp:n=1     $ Solucion
+20     0               -10  +30  imp:n=1     $ Vacio arriba-solucion
+30   200   8.6360e-2    10  -20  imp:n=1     $ Lata
+40     0                     20  imp:n=0     $ Exterior vacío
+
+10   RCC  0.  0.  0.   0.  0.  101.7   12.49 $ Interior de la lata
+20   RCC  0.  0. -1.   0.  0.  103.7   12.79 $ Esterior de la lata
+30   pz  39.24                               $ Altura de la solucion
+
+kcode  1000  1.0  25  100                    $ Calculo de criticidad
+ksrc    0.0  0.0  19.62                      $ Posicion de la fuente
+m100   . . . . . .     $ Material de la solucion Pu(NO3)3
+       . . . . . .
+mt100  lwtr
+m200   . . . . . .     $ Material de la lata
+       . . . . . .
+rand   seed=123456789

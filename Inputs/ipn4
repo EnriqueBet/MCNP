@@ -1,0 +1,31 @@
+Criticidad - Empleando ksrc & ssperficies $ TITULO
+c
+c     INSTITUTO POLITECNICO NACIONAL
+c     Elaboro: ADL
+c     Email: arturo.delfin@inin.gob.mx
+c
+c     -- Fecha de elaboracion del archivo de entrada: --
+c        4 de Julio de 2016
+c
+c    Tarjeta de Celdas
+c
+10   100   -18.74   -10       $ HEU
+20     0            +10       $ Vacio en el exterior
+
+c
+c    Tarjeta de Superficies
+c
+10   so   9.538               $ Esfera en el origen
+
+c    Tarjeta de Datos
+c
+imp:n 1 0
+m100    92235   -94.73        $ U-235
+        92238   -05.27        $ U-238
+c
+kcode  1000  1.0  10  50      $ Calculo de criticidad
+sdef   pos= 0. 0. 0.  rad=d1  $ Fuente uniforme supuesta
+si1    0.   9.538             $ desde 0 hasta 9.538 de radio
+sp1    -21  2                 $ considera R^2
+c
+c    Fin de archivo

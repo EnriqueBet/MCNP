@@ -1,0 +1,39 @@
+ipn2a - un cilindro, usando universo y fill
+c                                                                               
+c     INSTITUTO POLITECNICO NACIONAL                                            
+c     Elaboro: ADL                                                              
+c     Email: arturo.delfin@inin.gob.mx                                          
+c                                                                               
+c     -- Fecha de elaboracion del archivo de entrada: --                        
+c        09 de Septiembre de 2016                                               
+c                                                                               
+c    Tarjeta de Celdas                                                          
+c    ===> Universo 1 <===                                                       
+   10   100 0.09927 -3  u=1 $ Solucion infinita
+   20     0         3  u=1 $ vacio infinito
+c    ===> Mundo real <===                                                       
+   25     0         -1  fill=1 $ contenedor dentro, llenado
+   30   200 0.08636 1 -2  $ contenedor
+   40     0         2  $ exterior
+
+c    Tarjeta de Superficies                                                     
+c                                                                               
+    1       rcc 0 0 0 0 0 101.7 12.49  $ interior
+    2       rcc 0 0 -1 0 0 103.7 12.79  $ exterior
+    3        pz 39.24  $ altura de la solucion
+
+kcode 1000 1.000000 25 100
+ksrc  0.000000 0.000000 19.620000
+c                                                                               
+m100  1001.           0.06007  $ Material de la solucion Pu(NO3)3
+      8016.           0.03654 7014.         0.0023699 94239.       0.00027682 
+      94240.      1.2214e-005 94241.       8.339e-007 94242.        4.58e-008 
+c                                                                               
+m200  24050.       0.00071866  $ Material de la lata
+      24052.         0.013859 24053.        0.0015715 24054.       0.00039117 
+      26054.        0.0037005 26056.          0.05809 26057.        0.0013415 
+      26058.       0.00017853 28058.        0.0044318 28060.       0.00170713 
+      28061.      7.4207e-005 28062.       0.00023661 28064.      6.0256e-005 
+imp:n   1 3r         0             $ 10, 40
+mt100  lwtr                                                                     
+c     ........ sigue linea en blanco                                            
