@@ -1,0 +1,89 @@
+chicago 9000 5 cilindros
+c  Carlos Lopez Lima
+c  carlosomega40@hotmail.es
+c  4 de octubre del 2016
+c  
+c  
+10 10 -0.001205 -10             imp:n=1 $ Hoyo 
+20 20 -2.6989   +10 -20         imp:n=1
+30 30 -18.95    +20 -30         imp:n=1 $ Combustible
+40 20 -2.6989   +30 -40 +10     imp:n=1 $ Encamisado
+c
+110 10 -0.001205  -110           imp:n=1 $ Hoyo 
+120 20 -2.6989    +110 -120      imp:n=1
+130 30 -18.95     +120 -130      imp:n=1 $ Combustible
+140 20 -2.6989    +130 -140 +110 imp:n=1 $ Encamisado
+c
+210 10 -0.001205  -210           imp:n=1 $ Hoyo 
+220 20 -2.6989    +210 -220      imp:n=1
+230 30 -18.95     +220 -230      imp:n=1 $ Combustible
+240 20 -2.6989    +230 -240 +210 imp:n=1 $ Encamisado
+c
+310 10 -0.001205  -310           imp:n=1 $ Hoyo 
+320 20 -2.6989    +310 -320      imp:n=1
+330 30 -18.95     +320 -330      imp:n=1 $ Combustible
+340 20 -2.6989    +330 -340 +310 imp:n=1 $ Encamisado
+c
+410 10 -0.001205  -410           imp:n=1 $ Hoyo 
+420 20 -2.6989    +410 -420      imp:n=1
+430 30 -18.95     +420 -430      imp:n=1 $ Combustible
+440 20 -2.6989    +430 -440 +410 imp:n=1 $ Encamisado
+c
+500 40 -0.998207  +500 -600      imp:n=1 $ tanque
+600  0            +600           imp:n=0 $ Vacio
+c linea en blanco
+
+c superficies
+c
+10 RCC  0.0 0.0 0.0   0.0 0.0 21.3868  0.68375  $ Interior del aluminio
+20 RCC  0.0 0.0 0.11  0.0 0.0 21.1668  0.795    $ Uranio natural interior
+30 RCC  0.0 0.0 0.11  0.0 0.0 21.1668  1.4108   $ Uranio natural exterior
+40 RCC  0.0 0.0 0.0   0.0 0.0 21.3868  1.5208   $ aluminio exterior
+c
+110 RCC  0.0 0.0 21.3868  0.0 0.0 21.3868  0.68375  $ Interior del aluminio
+120 RCC  0.0 0.0 21.4968  0.0 0.0 21.1668  0.795    $ Uranio natural interior
+130 RCC  0.0 0.0 21.4968  0.0 0.0 21.1668  1.4108   $ Uranio natural exterior
+140 RCC  0.0 0.0 21.3868  0.0 0.0 21.3868  1.5208   $ aluminio exterior
+c
+210 RCC  0.0 0.0 42.7736  0.0 0.0 21.3868  0.68375  $ Interior del aluminio
+220 RCC  0.0 0.0 42.8836  0.0 0.0 21.1668  0.795    $ Uranio natural interior
+230 RCC  0.0 0.0 42.8836  0.0 0.0 21.1668  1.4108   $ Uranio natural exterior
+240 RCC  0.0 0.0 42.7736  0.0 0.0 21.3868  1.5208   $ aluminio exterior
+c
+310 RCC  0.0 0.0 64.1604  0.0 0.0 21.3868  0.68375  $ Interior del aluminio
+320 RCC  0.0 0.0 64.2704  0.0 0.0 21.1668  0.795    $ Uranio natural interior
+330 RCC  0.0 0.0 64.2704  0.0 0.0 21.1668  1.4108   $ Uranio natural exterior
+340 RCC  0.0 0.0 64.1604  0.0 0.0 21.3868  1.5208   $ aluminio exterior
+c
+410 RCC  0.0 0.0 85.5472  0.0 0.0 21.3868  0.68375  $ Interior del aluminio
+420 RCC  0.0 0.0 85.6572  0.0 0.0 21.1668  0.795    $ Uranio natural interior
+430 RCC  0.0 0.0 85.6572  0.0 0.0 21.1668  1.4108   $ Uranio natural exterior
+440 RCC  0.0 0.0 85.5472  0.0 0.0 21.3868  1.5208   $ aluminio exterior
+c
+500 RCC  0.0 0.0 0.0    0.0 0.0 106.934    1.5208   $ Barra entera
+600 RCC  0.0 0.0 -10.0  0.0 0.0 120        10.0     $ Tanque
+c linea en blanco
+
+kcode   1000 1.0   25  100
+ksrc    0.0  0.0   19.62  
+c datos
+c materiales
+c  material aire 
+m10     6000   0.000150  $ Carbono
+        7014   0.784431  $ Hidrogeno
+        8016   0.210748  $ Oxigeno
+        18000  0.004671  $ Argon
+c
+c   material Uranio natural pagina 344
+m20     92234  0.000058  $ Uranio 234
+        92235  0.007295  $ Uranio 235
+        92238  0.992647  $ Uranio 238
+c
+c   material aluminio
+m30     13027  1.0       $ Aluminio
+c
+c    material  agua
+m40     1001   0.666657  $ Hidrogeno
+        8016   0.333343
+c linea en blanco
+
