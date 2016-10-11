@@ -1,0 +1,206 @@
+Reactor Nuclear Chicago Modelo 9000 IPN
+c
+c          Instituto Nacional de Investigaciones Nucleares
+c          Departamento de Sistemas Nucleares
+c          Proyecto Modelo del Reactor Modelo 9000 IPN
+c          Autor: Dr. Arturo Delfín Loya
+c          Coautores: Proyecto AZTLAN
+c          Email: arturo.delfin@inin.gob.mx
+c
+c
+c          ______________________________________________________________
+c          ======= :) Este modelo incluye:                     (: =======
+c          ======= :)    *     Combustible                     (: =======
+c          ======= :)    *     Agua ligera que cubre el núcleo (: =======
+c          ======= :)    *     Calculos de Keff                (: =======
+c          ======= :)    *     Se considera reflexión en todo  (: =======
+c          ======= :)    *     150616                          (: =======
+c          ______________________________________________________________
+c
+c          ======= :) Cell Cards (: ======
+c
+c          ======= :) Combustible Estandar (: ======
+c 
+c   Este modelo incluye: 
+c   -Combustible en arreglo hexagonal 
+c   -Agua que rodea al núcleo sin la tina 
+c   -Calculo de keff 
+c
+c   -Combustible 
+1    1  -0.001293  -1      +6  -7   u=1 imp:n=1 $ Hoyo de aire
+2    2 -18.700000  +1  -2  +6  -7   u=1 imp:n=1 $ Combistible U-Natural
+3    1  -0.001293  +2  -3  +6  -7   u=1 imp:n=1 $ Gap de aire
+4    3  -2.700000  +3  -4  +6  -7   u=1 imp:n=1 $ Cladding 6061-T6 Aluminum
+c 
+c   -Fondo del combustible 8" lleno de agua 
+5    4  -1.000000  -3     +11  -6   u=1 imp:n=1 $ Fondo llenado con agua como reflector
+6    3  -2.700000  +3  -4 +11  -6   u=1 imp:n=1 $ Cladding 6061-T6 Aluminum
+c
+c   -Parte superior del combustible 9.9" lleno de aire
+7    1  -0.001293  -3      +7 -12   u=1 imp:n=1 $ Parte superior llenado con aire
+8    3  -2.700000  +3  -4  +7 -12   u=1 imp:n=1 $ Cladding 6061-T6 Aluminum
+c
+11   4  -1.000000  +4               u=1 imp:n=1 $ Agua fuera del Cladding
+c
+20    0  -8 lat=2 u=2 imp:n=1 fill=-11:11 -11:11 0:0 $ hexagonal cell
+c
+       4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+        4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+         4 4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 4 4
+          4 4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 4 4
+           4 4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+            4 4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+             4 4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+              4 4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+               4 4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+                4 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+                 4 4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4
+                  4 4 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 4 4
+                   4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4
+                    4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4
+                     4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4
+                      4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4
+                       4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4
+                        4 4 1 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4 4
+                         4 4 1 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4 4 4
+                          4 4 1 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4 4 4 4
+                           4 4 1 1 1 1 1 1 1 1 1 1 4 4 4 4 4 4 4 4 4 4 4
+                            4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+                             4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4 4
+c
+21   0  -9 +11 -12    fill=2       imp:n=1 $ Window
+22   4  -1.000000 -10  +9 +11 -12  imp:n=1 $ Window
+c
+c   -Tanque de acero Inoxidable SS316L
+23    5  -8.000000 +10 -13 +11 -12 imp:n=1 $ Espesor diametro del tanque SS316L
+24    5  -8.000000     -13 +14 -11 imp:n=1 $ Espesor fondo del tanque SS316L
+c
+25   0  +13:-14:+12                imp:n=0 $ Outside
+c
+c    *Cladding con aire (Centro del Reactor)*
+31   like  1 but mat=1 rho=-0.001293 u=3 imp:n=1
+32   like  2 but mat=1 rho=-0.001293 u=3 imp:n=1
+33   like  3 but mat=1 rho=-0.001293 u=3 imp:n=1
+34   like  4 but                     u=3 imp:n=1
+35   like  5 but                     u=3 imp:n=1
+36   like  6 but                     u=3 imp:n=1
+37   like  7 but                     u=3 imp:n=1
+38   like  8 but                     u=3 imp:n=1
+39   like 11 but                     u=3 imp:n=1
+c
+c    *Cladding de y con agua (Periferia del Reactor)*
+41   like  1 but mat=4 rho=-1.000000 u=4 imp:n=1
+42   like  2 but mat=4 rho=-1.000000 u=4 imp:n=1
+43   like  3 but mat=4 rho=-1.000000 u=4 imp:n=1
+44   like  4 but mat=4 rho=-1.000000 u=4 imp:n=1
+45   like  5 but mat=4 rho=-1.000000 u=4 imp:n=1
+46   like  6 but mat=4 rho=-1.000000 u=4 imp:n=1
+47   like  7 but mat=4 rho=-1.000000 u=4 imp:n=1
+48   like  8 but mat=4 rho=-1.000000 u=4 imp:n=1
+49   like 11 but mat=4 rho=-1.000000 u=4 imp:n=1
+c
+c ------------------------------------------------------------------------
+c .... a blank line seperates the cell cards from the surface cards .... 
+
+c   **********************************************************************
+c
+c            ===== :) SURFACE CARDS (: =======
+c
+c    ======= :) Conformación del combustible (: =======
+c
+1   cz +0.6350  $ Hoyo de aire para c/combustible
+2   cz +1.5375  $ radio exterior del combustible
+3   cz +1.6500  $ radio exterior del gap de aire
+4   cz +1.7600  $ radio exterior del Cladding Aluminio
+c
+6   pz -53.467 $ Plano parte inferior en z 
+7   pz +53.467 $ Plano parte superior en z 
+c
+c    ======= :) Arreglo Hexagonal y Región del Núcleo (: =======
+c
+8   rhp 0.0 0.0 -76.1  0.0 0.0 +154.7130  2.2225 $ hexagonal cell, pitch = 4.445 cm
+9   cz +42.5000   $ Región del núcleo
+10  cz +60.9600   $ Región del núcleo 
+11  pz -73.7870   $ Plano parte inferior en z agua
+12  pz +78.613    $ Plano parte Superior en z aire 
+13  cz +63.5000   $ Radio externo del tanque SS316L
+14  pz -76.327    $ Superficie inferior del tanque SS316L
+c
+c -----------------------------------------------------------------------
+c .. a blank line seperates the surface cards from the parameter cards .. 
+
+c
+c   *************************************************************
+c            ===== :) Tarjetas de Materiales (: =======
+c
+kcode 10000 1.0 50 500
+ksrc 
+      3.28   0.0  0.0
+     -3.28   0.0  0.0
+     -1.60   3.0  0.0
+     -1.60  -3.0  0.0
+      1.60   3.0  0.0
+      1.60  -3.0  0.0
+c
+m1   $ ==:@ Aire, densidad = 0.001293 g/cm**3, 293.6 K @:==
+     6000.70c -0.0001 $ C
+     7014.70c -0.7843 $ N
+     8016.70c -0.2109 $ O
+c
+m2   $=====> U-fuel density=18.7 g/cm**3,  293 K
+     92235.70c -0.00715 $ U-325
+     92238.70c -0.99285 $ U-238
+c
+c 
+m3   $=====> cladding 6061-T6 Aluminum density= 2.7 g/cc,  293.6 K
+     13027 -0.995    $ Al
+     12000 -0.01     $ Mg
+     14028 -0.00551  $ Si
+     14029 -0.000289 $ Si
+     14030 -0.000199 $ Si -0.005998
+     29063 -0.00137  $ Cu
+     29065 -0.000630 $ Cu -0.002
+     24050 -0.000102 $ Cr
+     24052 -0.002055 $ Cr
+     24053 -0.000237 $ Cr
+     24054 -0.000060 $ Cr -0.003
+c 
+m4   $=====> Agua Ligera density= 1.0 g/cc,  293.6 K
+     1001.70c  2.000000 $ H
+     8016.70c  1.000000 $ O (Water, p=1  g/cm3)
+mt4   lwtr.15t
+c 
+m5   $=====> Austenitic SS-316L SA-479, densidad = 8.00 gr/cm3
+c      NUREG/CR-5704 ANL-98/31 @:==
+       6000   -0.03000    $ Carbono natural   
+       7014   -0.09963    $ Nitrógeno-14      
+       7015   -0.00037    $ Nitrógeno-15      
+      14000   -1.00000    $ Silicio natural   
+      15031   -0.04500    $ Fosforo-31        
+      16000   -0.03000    $ Azufre natural    
+      24050   -0.73865    $ Cromo-50
+      24052  -14.24430    $ Cromo-52
+      24053   -1.61500    $ Cromo-53
+      24054   -0.40205    $ Cromo-54
+      25055   -2.00000    $ Manganeso-55         
+      26054   -3.85241    $ Fierro-54
+      26056  -59.88860    $ Fierro-56
+      26057   -1.37120    $ Fierro-57
+      26058   -0.18282    $ Fierro-58
+      28000  -12.00000    $ Niquel            
+      28058   -8.1924     $ Niquel-58
+      28060   -3.1320     $ Niquel-60
+      28061   -0.1356     $ Niquel-61
+      28062   -0.4308     $ Niquel-62
+      28064   -0.1092     $ Niquel-64
+      42000   -2.50000    $ Molibdeno natural 
+c
+c =====> mesh tally for detailed fission rate
+c
+c fmesh4:n  geom=xyz origin= -28. -28. -69.
+c           imesh= 28.  iints=400
+c           jmesh= 28.  jints=400
+c           kmesh= 73.  kints=1
+c fm4  -1. 0  -6
+c 
+c            ===== :) FIN DEL ARCHIVO (: =======
