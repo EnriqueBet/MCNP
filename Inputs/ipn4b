@@ -1,0 +1,53 @@
+ipn4b - Like m but y CTRL
+c
+c     INSTITUTO POLITECNICO NACIONAL
+c     Elaboro: ADL
+c     Email: arturo.delfin@inin.gob.mx
+c
+c     -- Fecha de elaboracion del archivo de entrada: --
+c        19 de Septiembre de 2016
+c
+c     Tarjeta de Celdas
+c    ==> Anaranjado claro, Universo 7 <==
+1    110  -18.724760  -11      u=7 imp:n=1 $ Comb., anaranjado
+2    120  -0.9982070  +11      u=7 imp:n=1 $ Agua
+c
+c    ==> Verde claro, Universo 8 <==
+3    130  -18.944386  -11      u=8 imp:n=1 $ Combustible, verde
+4    120  -0.9982070  +11      u=8 imp:n 1 $ Agua
+c
+c    ==> Mundo real <==
+5      0    -12    fill=7    imp:n 1        $ Celda unit., origen abajo-izquierda
+6    like 5  but  fill=8 trcl=(  0  1.4  0)  imp:n 1 $ arriba-izquierda
+7    like 5  but  fill=8 trcl=(1.4    0  0)  imp:n 1 $ abajo-derecha
+8    like 5  but  fill=7 trcl=(1.4  1.4  0)  imp:n 1 $ abajo-derecha
+9    0       +13                             imp:n 0  $ Universo externo
+c
+
+c    Tarjeta de Superficies
+c
+11    rcc  0.  0.  -180.  0.  0. +360.  0.49  $ Combustible
+12    rpp  -.7  +.7   -.7  +.7  -180. +180.   $ Cubo del Combustible
+13    rpp  -.7 +2.1   -.7 +2.1  -180. +180.   $ Universo externo
+c
+
+c Tarjeta de Datos
+c
+kcode 1000 1.0 25 100
+ksrc 1.4  0.  0.
+c
+m110    $ Combustible HEU
+       92234   0.009800
+       92235   0.931550
+       92236   0.004500
+       92238   0.054150
+c
+m120    $ Agua Moderador
+        1001   0.111894  $ H
+        8016   0.888106  $ O
+c
+m130    $ Combustible LEU
+       92234   0.000267
+       92235   0.030000
+       92236   0.000138
+       92238   0.969595
